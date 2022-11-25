@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { FC } from 'react';
+import {
+  SafeAreaView,
+  Text,
+} from 'react-native';
+import HeaderClass from './src/components/Headers';
+import Quiz from './src/screens/Quiz';
 
-export default function App() {
+
+const App: FC=() => {
+  
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={{backgroundColor:'white',flex:1}}>
+      <HeaderClass title={"Quiz App"}/>
+     <Quiz/>
+    </SafeAreaView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+export default App;
